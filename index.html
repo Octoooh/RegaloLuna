@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Nuestra Banda Sonora</title>
+  <title>Luna Isabela</title>
   <meta name="description" content="Canciones que guardan nuestros mejores momentos" />
 
   <!-- Google Fonts: Playfair Display, Outfit & Alex Brush -->
@@ -106,18 +106,18 @@
     <div id="view-envelope" class="w-full max-w-md text-center transition-all duration-500">
       <div class="mb-4">
         <span class="text-xs uppercase tracking-[0.25em] text-rose-300/80 font-sans">Un regalo especial para ti</span>
-        <h1 class="text-3xl md:text-4xl font-serif text-white mt-1">Nuestra Banda Sonora</h1>
-        <p class="text-sm text-white/60 font-sans mt-1">Para la persona que ilumina mi vida</p>
+        <h1 class="text-3xl md:text-4xl font-serif text-white mt-1">Luna Isabela</h1>
+        <p class="text-sm text-white/60 font-sans mt-1">Para mi morenita preciosha!</p>
       </div>
 
-      <div id="envelope-card-trigger" class="relative mx-auto w-72 h-48 md:w-80 md:h-52 bg-gradient-to-br from-rose-950/60 to-purple-950/60 rounded-xl border border-rose-500/20 shadow-2xl flex items-center justify-center cursor-pointer group hover:scale-[1.02] transition-transform duration-300">
+      <div class="relative mx-auto w-72 h-48 md:w-80 md:h-52 bg-gradient-to-br from-rose-950/60 to-purple-950/60 rounded-xl border border-rose-500/20 shadow-2xl flex items-center justify-center cursor-pointer group hover:scale-[1.02] transition-transform duration-300" onclick="openGiftEnvelope()">
         <div id="envelope-flap" class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-rose-900/50 to-transparent border-t border-rose-400/30 rounded-t-xl transition-all duration-700 origin-top"></div>
         
         <div id="envelope-letter" class="absolute inset-3 bg-stone-100 text-stone-900 rounded-lg p-4 shadow-xl opacity-0 scale-95 transition-all duration-700 text-left pointer-events-none flex flex-col justify-between">
           <div>
-            <div class="text-xs font-serif text-stone-500 italic">De: Con todo mi amor</div>
+            <div class="text-xs font-serif text-stone-500 italic">De: TE AMO!</div>
             <p class="font-serif italic text-xs leading-relaxed text-stone-800 mt-2 line-clamp-4">
-              "He reunido en esta pequeña cápsula las canciones que me recuerdan a ti, a nuestras risas interminables y a los instantes donde el mundo se volvió más bonito. Abre este detalle y recorre cada melodía..."
+              "Reuni una serie de canciones que me recuerdan a ti, que te quiero dedicar, una cancion por cada letra de tu nombre mi reina, escuchalas con cuidado, lee cada uno de los mensajitos que te hice y espero que te mole!"
             </p>
           </div>
           <div class="text-right text-[10px] font-sans text-rose-600 font-semibold tracking-wider uppercase">Toca para escuchar &rarr;</div>
@@ -142,15 +142,15 @@
       <svg class="w-5 h-5 text-rose-400" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
       </svg>
-      <span class="text-lg font-serif tracking-wide text-white whitespace-nowrap shrink-0">Nuestra Banda Sonora</span>
+      <span class="text-lg font-serif tracking-wide text-white whitespace-nowrap shrink-0">Luna Isabela</span>
     </div>
 
     <div class="hidden md:flex items-center gap-6 text-xs text-white/60 tracking-wider uppercase font-sans">
       <span class="hover:text-white transition-colors cursor-pointer" onclick="openDedicationModal()">Ver Carta</span>
       <span class="text-white/20">/</span>
-      <span id="active-track-badge" class="text-white/90 font-medium">Pista 1 de 9</span>
+      <span id="active-track-badge" class="text-white/90 font-medium">Pista 1 de 14</span>
       <span class="text-white/20">/</span>
-      <span class="text-rose-300 font-medium">Con todo mi amor</span>
+      <span class="text-rose-300 font-medium">TE AMO!</span>
     </div>
 
     <div class="flex items-center gap-2 shrink-0">
@@ -193,6 +193,7 @@
   <!-- ========================================== -->
   <footer class="relative z-20 w-full max-w-4xl mx-auto px-4 pb-6 pt-2">
     <div class="glass-card-elevated rounded-2xl p-3 md:p-4 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border border-white/20">
+      <!-- Miniatura y Título -->
       <div class="flex items-center gap-3 w-full sm:w-auto min-w-0">
         <div class="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 shadow">
           <img id="footer-thumb" src="" alt="Portada" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800'" />
@@ -206,6 +207,7 @@
         </div>
       </div>
 
+      <!-- Controles centrales y barra de progreso -->
       <div class="flex-1 w-full max-w-md flex flex-col items-center gap-1.5">
         <div class="flex items-center gap-4">
           <button onclick="prevSong()" class="text-white/70 hover:text-white transition-colors cursor-pointer" title="Anterior">
@@ -228,6 +230,7 @@
         </div>
       </div>
 
+      <!-- Enlace externo a Spotify -->
       <div class="hidden sm:flex items-center gap-2 shrink-0">
         <a id="player-spotify-link" href="#" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-[#1DB954] hover:text-black text-white text-xs font-semibold font-sans flex items-center gap-1.5 border border-white/15 transition-all">
           <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -244,11 +247,11 @@
     <div class="glass-card-elevated max-w-lg w-full rounded-2xl p-6 md:p-8 text-center relative border border-rose-500/30">
       <button onclick="closeDedicationModal()" class="absolute top-4 right-4 text-white/50 hover:text-white text-lg">&times;</button>
       <span class="font-handwriting text-3xl text-rose-300 block mb-1">Para ti</span>
-      <h3 class="font-serif text-2xl font-bold text-white mb-4">Nuestra Banda Sonora</h3>
+      <h3 class="font-serif text-2xl font-bold text-white mb-4">Luna Isabela</h3>
       <p class="font-serif italic text-white/80 leading-relaxed text-sm md:text-base mb-6">
-        "He reunido en esta pequeña cápsula las canciones que me recuerdan a ti, a nuestras risas interminables y a los instantes donde el mundo se volvió más bonito. Abre este detalle y recorre cada melodía..."
+        "Reuni una serie de canciones que me recuerdan a ti, que te quiero dedicar, una cancion por cada letra de tu nombre mi reina, escuchalas con cuidado, lee cada uno de los mensajitos que te hice y espero que te mole!"
       </p>
-      <div class="text-xs uppercase tracking-widest text-rose-300 font-sans font-semibold">Con todo mi amor</div>
+      <div class="text-xs uppercase tracking-widest text-rose-300 font-sans font-semibold">TE AMO!</div>
     </div>
   </div>
 
@@ -269,7 +272,7 @@
         "audioPreview": "https://www.dropbox.com/scl/fi/xy3kfqytggwkvwytbkgvq/Zo-Luna-MTV-Unplugged.mp3?rlkey=jisjm3x1h4n9kn63knkevf6pn&st=y0nd0vqd&dl=0",
         "spotifyUrl": "https://open.spotify.com/intl-es/track/7b3k8I1fncAzbk9PHnLkbX?autoplay_ok=1",
         "dedicatoria": "- \" Pero nada se detiene, solo vivo para ti\nDame solo un beso que me alcance hasta morir\nComo un vicio que me duele, quiero mirarte a los ojos\"\n\nEmpiezo con la cancion que mas me recuerda a ti en este mundo, nunca fui mucho de Zoe, ni de musica asi, pero este tema al tener tu nombre, se volvio inmensamente especial para mi ! ",
-        "fechaOMomento": "L de Luna, Zoe",
+        "fechaOMomento": "L de Luna",
         "colorAmbiental": "#c1ffff",
         "colorSecundario": "#ffffff"
       },
@@ -283,7 +286,7 @@
         "audioPreview": "https://www.dropbox.com/scl/fi/1szvpzb1lweotgl9u5q5z/UWAIE-Kapo-Video-Oficial.mp3?rlkey=46o357vi2xmbdto997svf6u4t&st=fxo7wigf&dl=0",
         "spotifyUrl": "https://open.spotify.com/intl-es/track/2onJwRDg0IJg284l8j65yy?autoplay_ok=1",
         "dedicatoria": "- \"Flaca, vos sos hermosa, y te mereces todo\nAmarte es mi necesidad, mi necesidad\nDe ti me gustan cosas, la verdad, todo\nQuitarte esa inseguridad es mi necesidad\"\n\nQuedarme con una sola parte de esta cancion fue muy dificil, y te dedico completamente los 2:51 que dura, esta cancion me transmite la misma tranquilidad que me da tu voz, que me da tu amor, esa tranquilidad que me refresca mi corazoncito y me alegra los diash, te amo mi reina!",
-        "fechaOMomento": "U de UWAIE, Kapo",
+        "fechaOMomento": "U de UWAIE",
         "colorAmbiental": "#af3d0a",
         "colorSecundario": "#d07207"
       },
@@ -310,7 +313,7 @@
         "portada": "https://i.scdn.co/image/ab67616d0000b273ac6e52ed084e8209691f208f",
         "audioPreview": "https://www.dropbox.com/scl/fi/1n702om5hs9as8j6xg7ir/Mon-Laferte-Am-rrame-Video-Oficial-ft.-Juanes.mp3?rlkey=2iy5mkoln1ll8scgc2dx1z3et&st=9q8fb007&dl=0",
         "spotifyUrl": "https://open.spotify.com/track/3EK4tGkSiO5xvvB5sM4tln?autoplay_ok=1",
-        "dedicatoria": "\"Cúrame\nY enférmame de a poco, poco a poco, cúrame\nY transfórmame en un loco, poco a poco, amárrame\"\nLa primera cancion de Mon Laferte que realmente escuche y fue por ti, esta cancion me hizo ver que tus gustos erau realmente lindos, y me motivo a seguir escuchando lo que te hacia feliz y ahora me mola mon laferte, el rock en español y todo es POR TIIIIIII  Y COMO DICE LA CANCION AMARRAMEEEE!!!!!!",
+        "dedicatoria": "\"Cúrame\nY enférmame de a poco, poco a poco, cúrame\nY transfórmame en un loco, poco a poco, amárrame\"\nLa primera cancion de Mon Laferte que realmente escuche y fue por ti, esta cancion me hizo ver que tus gustos eran realmente lindos, y me motivo a seguir escuchando lo que te hacia feliz y ahora me mola mon laferte, el rock en español y todo es POR TIIIIIII  Y COMO DICE LA CANCION AMARRAMEEEE!!!!!!",
         "fechaOMomento": "A de Amarrame",
         "colorAmbiental": "#fffff2",
         "colorSecundario": "#ffffff"
@@ -323,7 +326,7 @@
         "duracion": "2:27",
         "portada": "https://i.scdn.co/image/ab67616d0000b273eda9478c39a21e1cdc6609ca",
         "audioPreview": "https://www.dropbox.com/scl/fi/3nf4vor3qoi2p0lxnh4fx/Goo-Goo-Dolls-Iris-Official-Music-Video-4K-Remaster.mp3?rlkey=wsr6hb4sh066ws4uzikovusvn&st=fnporz5b&dl=0",
-        "spotifyUrl": "https://open.spotify.com/track/5b7OgznPJJr1vNXavu4umHy",
+        "spotifyUrl": "https://open.spotify.com/intl-es/track/6Qyc6fS4DsZjB2mRW9DsQs?autoplay_ok=1",
         "dedicatoria": "- \"And I'd give up forever to touch you, 'cause I know that you feel me somehow\nyou're the closest to Heaven that I'll ever be\nAnd I don't wanna go home right now\"\nSe que no sabes ingles, pero esta cancion habla de renunciar a todo por unos instantes con alguien, ese alguien eres tu, la cancion lo menciona y dejame decirtelo, eres y seras lo mas cerca que estare del cielo (es curioso por que te llamas luna y tal) pero en el sentido sentimental, eres lo mejor de este mundo y renunciare a lo que haga falta por unos instantes contigo, TE AMO!",
         "fechaOMomento": "I de Iris",
         "colorAmbiental": "#ffffff",
@@ -384,15 +387,85 @@
         "fechaOMomento": "E de Eres",
         "colorAmbiental": "#fffde2",
         "colorSecundario": "#ffffff"
+      },
+      {
+        "id": "song-1794201224515",
+        "titulo": "Le pido a dios",
+        "artista": "Feid",
+        "album": "Feid, DJ Premier - SIXDO",
+        "duracion": "3:30",
+        "portada": "https://i.scdn.co/image/ab67616d0000b2737cc7b0d6a82846cd8b158f99",
+        "audioPreview": "https://www.dropbox.com/scl/fi/fnl6cyhy3e2mh6sdsvvmk/LE-PIDO-A-DIOS-FEID-x-DJ-PREMIER-SIXDO-Album-2022.mp3?rlkey=o4ab254x7ihrbdp8e9abep00a&st=n4emf1q7&dl=0",
+        "spotifyUrl": "https://open.spotify.com/intl-es/track/4TFNKnMWjcMWzpkSwQrrcu?autoplay_ok=1",
+        "dedicatoria": "-\" Yo creo que tú has sido mi primera mujer, ninguna gata me ha hecho ver lo que tú me has hecho ver\nLa felicidad no tiene precio, pero tiene tu name\"\nOdias feid, pero si o si te tenia que dedicar esta cancion mi vida, esta cancion significa muchas cosas para mi, desde el nombre de la cancion, y lo que abarca, nunca fui asi religioso, no solia orar, pero tu presencia en mi vida me hizo tener un motivo para orar, una persona a la que desearle el bien y llevarla en todas mis oraciones al amanecer, asi que ya sabes, LE PIDO A DIOS QUE TE CUIDEEEE!!!!!",
+        "fechaOMomento": "L de Le pido a dios",
+        "colorAmbiental": "#9affc3",
+        "colorSecundario": "#ffffc0"
+      },
+      {
+        "id": "song-1794201683734",
+        "titulo": "Aquel Nap ZzZz",
+        "artista": "Rauw Alejandro",
+        "album": "Rauw Alejandro - Viceversa",
+        "duracion": "3:30",
+        "portada": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVRKmuHA617Oqulx6JJWsNIxIRY2lotjx3XAL8ps6NsQ&s=10",
+        "audioPreview": "https://www.dropbox.com/scl/fi/unh8ojkivf9gzbqeubqbv/Rauw-Alejandro-Aquel-Nap-ZzZz-Audio-Oficial.mp3?rlkey=u3791idqyl1a81t3j7wdahlxw&st=9sfhujr9&dl=0",
+        "spotifyUrl": "https://open.spotify.com/intl-es/track/5bQLsyTrUaMQRfr6whwGe5?autoplay_ok=1",
+        "dedicatoria": "Ultima cancion con la ultima letra del nombre de mi amada. Luna Isabela, recuerdo la primera vez que me dedicaste esta cancion, la relacion venia rara poke habia sido reciente lo de Vidales, me dedicaste esa cancion y eso me dio las fuerzas, las ganitas y el amor de seguir para llegar al dia de hoy, no se que parte citar de esta cancion por que te  quiero dedicar los 5 minutos que dura... espero que hayas disfrutado de la ultima cancion, o no? NO ES LA ULTIMA!!!!1",
+        "fechaOMomento": "A de Aquel Nap zzzz",
+        "colorAmbiental": "#9900b8",
+        "colorSecundario": "#ff4a73"
+      },
+      {
+        "id": "song-1794202429679",
+        "titulo": "309",
+        "artista": "Nsqk",
+        "album": "Nsqk - Botanica",
+        "duracion": "3:30",
+        "portada": "https://i.scdn.co/image/ab67616d0000b273db0bf320fc5001cd184af8fe",
+        "audioPreview": "https://www.dropbox.com/scl/fi/bbguxoe9q6ngmfaqs5taz/309.mp3?rlkey=gtd0a9y3yqrxj3934q48uyorb&st=k2ybz6xs&dl=0",
+        "spotifyUrl": "https://open.spotify.com/intl-es/track/0q37bjxhRwzjtZynlU9ZsI",
+        "dedicatoria": "-\" Quiero ser tu libro favorito\nSer tu luz en el abismo\nSer tu sueño más bonito\nPero rómpeme en pedazos\nTan pequeños como arena\nSin tu amor mi vida simplemente\nNo vale la pena \"\nPrimer bonus track de 3, yyyyyy... Sin tu amor mi vida simplemente no vale la pena",
+        "fechaOMomento": "BONUS TRACK",
+        "colorAmbiental": "#ffffff",
+        "colorSecundario": "#ffffff"
+      },
+      {
+        "id": "song-1794202917050",
+        "titulo": "YOKO",
+        "artista": "Alvaro Diaz",
+        "album": "Alvaro Diaz - Sayonara",
+        "duracion": "3:30",
+        "portada": "https://i.imgur.com/BIEai3Z.png",
+        "audioPreview": "https://www.dropbox.com/scl/fi/sw9swqs28rkxc6qjljw4j/Alvaro-Diaz-Yoko-Official-Video.mp3?rlkey=efha9fe9fw6cw4kr96gxmgvsf&st=3scxwwyx&dl=0",
+        "spotifyUrl": "https://open.spotify.com/intl-es/track/6dlZryuz7NIz20faRoZV4k",
+        "dedicatoria": "Soy un tonto y mil veces me equivoco, pero te quiero siempre a mi ladito como Yoko, okei?0 Este es el segundo Bonus Track, esta cancion significa tanto para mi despues de todos estos meses, poner esa fotito de nosotros 2, escuchar esa cancion me hizo llorar de nuevo, nunca habia llorado tanto haciendote un regalo, de verdad te amo, de verdad no te me vayas nunca, de verdad lleguemos a viejitos juntitosh. <3",
+        "fechaOMomento": "BONUS TRACK",
+        "colorAmbiental": "#ffffd3",
+        "colorSecundario": "#c59ad5"
+      },
+      {
+        "id": "song-1794203547811",
+        "titulo": "My One and Only Love",
+        "artista": "Mon Laferte, N. Lafourcade y  S. Estrada",
+        "album": "Mon Laferte, N. Lafourcade y  S. Estrada - Femme Fatale",
+        "duracion": "3:30",
+        "portada": "https://i.scdn.co/image/ab67616d0000b2730b4c75d5dde5ed7ca003e27d",
+        "audioPreview": "https://www.dropbox.com/scl/fi/dhgxpqu35zyzxjs83u4aj/Mon-Laferte-Natalia-Lafourcade-Silvana-Estrada-My-One-And-Only-Love-Official-Lyric-Video.mp3?rlkey=ttydk35hog1d0k9ihowu5rsw4&st=xb9gmm5o&dl=0",
+        "spotifyUrl": "https://open.spotify.com/intl-es/track/0ILCaNMr4s5CZdF1Km09Ln",
+        "dedicatoria": "TUUU ERES LO QUE SIEMPREE YOO SOÑEEEEEEEEEEEE, me van a falta dias en este planeta para dedicartela Luna, eres la mujer de mis sueños, la bebe de mis ojitos, la mejor hija, la mejor estudiante, LA MASH CRACK Y PROXIMAMENTE LA MEJOR PSICOLOGAAAAAAAAAAA!!!! De verdad anhelo que este regalito te haya gustado, que hayas escuchado todas las canciones y que alguna parte de este regalito te haya tocado el alma, grashiash por estos 6 meses y TE AMO! Recuerda que siempre seras my one and only love porfavorcito",
+        "fechaOMomento": "Bonus track final",
+        "colorAmbiental": "#4bbce0",
+        "colorSecundario": "#ffffc3"
       }
     ];
 
     const CONFIG_REGALO = {
-      "destinatario": "Para la persona que ilumina mi vida",
-      "remitente": "Con todo mi amor",
-      "tituloRegalo": "Nuestra Banda Sonora",
+      "destinatario": "Para mi morenita preciosha!",
+      "remitente": "TE AMO!",
+      "tituloRegalo": "Luna Isabela",
       "subtituloRegalo": "Canciones que guardan nuestros mejores momentos",
-      "mensajeCarta": "He reunido en esta pequeña cápsula las canciones que me recuerdan a ti, a nuestras risas interminables y a los instantes donde el mundo se volvió más bonito. Abre este detalle y recorre cada melodía...",
+      "mensajeCarta": "Reuni una serie de canciones que me recuerdan a ti, que te quiero dedicar, una cancion por cada letra de tu nombre mi reina, escuchalas con cuidado, lee cada uno de los mensajitos que te hice y espero que te mole!",
       "tipoApertura": "sobre"
     };
 
@@ -428,12 +501,6 @@
       initSwiper();
       setupAudioListeners();
       updateActiveSongDetails(0);
-
-      // Enlace seguro al contenedor del sobre para asegurar el clic
-      const envelopeTrigger = document.getElementById("envelope-card-trigger");
-      if (envelopeTrigger) {
-        envelopeTrigger.addEventListener("click", openGiftEnvelope);
-      }
     });
 
     function setupOpeningView() {
@@ -449,11 +516,7 @@
       viewEnvelope.classList.remove("hidden");
     }
 
-    let isOpening = false;
     function openGiftEnvelope() {
-      if (isOpening) return;
-      isOpening = true;
-
       const seal = document.getElementById("envelope-seal");
       const flap = document.getElementById("envelope-flap");
       const letter = document.getElementById("envelope-letter");
@@ -485,7 +548,6 @@
     }
 
     function replayIntro() {
-      isOpening = false;
       const overlay = document.getElementById("opening-overlay");
       const seal = document.getElementById("envelope-seal");
       const flap = document.getElementById("envelope-flap");
@@ -496,12 +558,15 @@
       if (letter) { letter.style.opacity = "0"; letter.style.transform = "scale(0.95)"; }
 
       pauseAudio();
-      overlay.classList.remove("hidden");
-      setTimeout(() => { overlay.style.opacity = "1"; }, 50);
+      if (overlay) {
+        overlay.classList.remove("hidden");
+        setTimeout(() => { overlay.style.opacity = "1"; }, 50);
+      }
     }
 
     function renderSwiperSlides() {
       const container = document.getElementById("swiper-slides-container");
+      if (!container) return;
       container.innerHTML = "";
 
       LISTA_CANCIONES.forEach((song, idx) => {
@@ -744,14 +809,18 @@
 
     function openDedicationModal() {
       const modal = document.getElementById("dedication-modal");
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
+      if (modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
     }
 
     function closeDedicationModal() {
       const modal = document.getElementById("dedication-modal");
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
+      if (modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
     }
   </script>
 </body>
